@@ -275,7 +275,7 @@ settings.defaultModel = model;
 settings.defaultThinkingLevel = thinking;
 settings.enabledModels = ["gpt-5.6-*", "gpt-6-*"];
 const temp = `${settingsPath}.tmp-${process.pid}`;
-fs.writeFileSync(temp, `${JSON.stringify(settings, null, 2)}\\n`, { mode: 0o600 });
+fs.writeFileSync(temp, `${JSON.stringify(settings, null, 2)}\n`, { mode: 0o600 });
 fs.renameSync(temp, settingsPath);
 NODE
 
